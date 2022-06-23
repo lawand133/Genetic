@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Genetic Algorithm</title>
+</head>
+<body>
+</br></br>
+<div align="center">
+
+
+<table>
+    <tr>
+        <td colspan="2"><H1><i>knapsack problem</i></H1></td>
+    </tr>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table border="1px" style="height:200px ; width: 275px" >
+            <tr>
+                <td colspan="2" align="center" ><h2><i>Add Pack</i></h2></td>
+            </tr>
+            <tr>
+               <td><label>Weight</label></td>
+               <td>{{ form1.weight }}</td> 
+            </tr>
+            <tr>
+                <td><label>Value</label>
+                <td>{{ form1.value }}</td> 
+             </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" id="AddBtn" style="width: 275px; height: 50px;" ><h4>Add Pack</h4></button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <form action="result" method="POST">
+        {% csrf_token %}
+         <table border="1" style="height:170px ; width: 275px">
+            <td>
+        <table>
+        <tr>
+          <td><label>Max weight</label>
+            <td>{{ form2.WeightLimit}}</td>
+        <tr>
+        <tr>
+            <td><label>Iterations</label>
+            <td>{{ form2.Iterations}}</td>
+        <tr>
+        <tr>
+            <td><label>Mutation Probabilty</label>
+            <td>{{ form2.MutationProbabilty}}</td>
+        <tr>
+            <td colspan="2"> <button type="submit" id="SolveBtn" style="width: 275px; height: 50px;" ><h4>Find solution</h4></button></td>
+        </tr>
+         </table>
+        </table>
+    </div>
+</body>
+</html>
